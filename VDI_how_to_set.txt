@@ -1,0 +1,40 @@
+   연결별 DNS 접미사. . . . :
+   링크-로컬 IPv6 주소 . . . . : fe80::34c3:8fd1:5213:ba7f%8
+   IPv4 주소 . . . . . . . . . : 172.21.133.83
+   서브넷 마스크 . . . . . . . : 255.255.252.0
+   기본 게이트웨이 . . . . . . : 172.21.132.1
+
+
+
+URL :https://www.adaptiveoffice.com
+
+ID  : Knox ID
+
+PW  : 최초 사용시 '비밀번호 찾기' 메뉴를 통해 비밀번호 초기화 진행 (첨부1. VDI 매뉴얼 참고)
+
+        기존 VDI 사용 임직원은 기존 정보로 로그인
+
+□ hosts 파일 설정하여 사용하면 편합니다. (C:\Windows\System32\drivers\etc\hosts)
+70.2.250.52 manual.score
+70.2.250.53 jira.score
+70.2.250.54 ci.score
+70.2.250.55 gerrit.score repository.score sonar.score gitlab.score repository.score sonar.score password.score coresystem.score
+70.2.250.56 confluence.score
+70.2.250.67 techino.score
+
+
+
+□ 인터넷 이용 (vdi 접근해서 이렇게 하면 된다는 뜻 같은데..?)
+  - 웹프락시 설정 必(첨부2. 웹프락시 수동설정,해제 방법 참고) 
+
+① 웹프락시설정-경로:인터넷옵션→연결→LAN설정→자동구성스크립트사용(S)클릭‘http://30.30.30.6/score.pac’입력후확인
+
+②인증서설치-경로:인터넷옵션→내용→인증서→신뢰할수있는루트인증기관→가져오기→Score.cer인증서선택후확인
+③ 웹차단확인-InternetExplorer열어서클리앙사이트(www.clien.net)사이트접속‘비업무사이트차단’페이지뜨는지확인아래와같이뜨면정상적으로웹프락시설정된것입니다
+
+④ 웹차단예외신청-업무상웹사이트차단예외가필요한경우예외신청가능-신청경로:IRCENTER>인프라>웹사이트차단예외신청
+
+Internet Explorer 웹프락시해제방법
+①웹프락시설정해제-경로:인터넷옵션→연결→LAN설정→자동구성스크립트사용(S)'Uncheck’후확인
+
+※사외망에서네트워크연결및인터넷사용이필요한경우웹프락시설정해제후이용바랍니다
